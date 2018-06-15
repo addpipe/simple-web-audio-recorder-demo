@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple WebAudioRecorder.js demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  </head>
+  <body>
+	
+	Convert audio to:
+	<select id="encodingTypeSelect">
+	  <option value="wav">Waveform Audio (.wav)</option>
+	  <option value="mp3">MP3 (MPEG-1 Audio Layer III) (.mp3)</option>
+	  <option value="ogg">Ogg Vorbis (.ogg)</option>
+	</select>
+
+	<button id="recordButton">Record</button>
+	<button id="stopButton" disabled>Stop</button>
+
+	<h3>Log</h3>
+	<pre id="log"></pre>
+
+	<h3>Recordings</h3>
+	<ol id="recordingsList"></ol>
+  
+  	<!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+	<script src="js/WebAudioRecorder.min.js"></script>
+	<script src="js/app.js"></script>
+
+  </body>
+</html>
