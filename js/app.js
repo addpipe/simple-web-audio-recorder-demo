@@ -6,6 +6,9 @@ var recorder; 						//WebAudioRecorder object
 var input; 							//MediaStreamAudioSourceNode  we'll be recording
 var encodingType; 					//holds selected encoding for resulting audio (file)
 var encodeAfterRecord = true;       // when to encode
+
+// shim for AudioContext when it's not avb. 
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioContext = new AudioContext; //new audio context to help us record
 
 var encodingTypeSelect = document.getElementById("encodingTypeSelect");
@@ -46,7 +49,7 @@ function startRecording() {
 		input = audioContext.createMediaStreamSource(stream);
 		
 		//stop the input from playing back through the speakers
-		input.connect(audioContext.destination)
+		//input.connect(audioContext.destination)
 
 		//get the encoding 
 		encodingType = encodingTypeSelect.options[encodingTypeSelect.selectedIndex].value;
