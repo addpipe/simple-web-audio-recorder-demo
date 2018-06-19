@@ -15,11 +15,6 @@ var encodingTypeSelect = document.getElementById("encodingTypeSelect");
 var recordButton = document.getElementById("recordButton");
 var stopButton = document.getElementById("stopButton");
 
-// shim for createScriptProcessor when it's not avb. 
-if (audioContext.createScriptProcessor == null) {
-	audioContext.createScriptProcessor = audioContext.createJavaScriptNode;
-}
-
 //add events to those 2 buttons
 recordButton.addEventListener("click", startRecording);
 stopButton.addEventListener("click", stopRecording);
