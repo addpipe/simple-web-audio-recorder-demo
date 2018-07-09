@@ -8,16 +8,16 @@
   </head>
   <body>
 	
-	Convert audio to:
+	Convert recorded audio to:<br>
 	<select id="encodingTypeSelect">
 	  <option value="wav">Waveform Audio (.wav)</option>
 	  <option value="mp3">MP3 (MPEG-1 Audio Layer III) (.mp3)</option>
 	  <option value="ogg">Ogg Vorbis (.ogg)</option>
 	</select>
-
-	<button id="recordButton">Record</button>
-	<button id="stopButton" disabled>Stop</button>
-
+	<div id="controls">
+		<button id="recordButton">Record</button>
+		<button id="stopButton" disabled>Stop</button>
+	</div>
 	<h3>Log</h3>
 	<pre id="log"></pre>
 
