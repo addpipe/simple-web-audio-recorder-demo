@@ -1,4 +1,4 @@
-# simple-web-audio-recorder-demo
+# Simple WebAudioRecorder.js demo
 A simple HTML/JS demo that uses [WebAudioRecorder.js](https://github.com/higuma/web-audio-recorder-js) to record mp3, wav and Vorbis audio on a web page.
 
 Blog post: [https://addpipe.com/blog/using-webaudiorecorder-js-to-record-audio-on-your-website/](https://addpipe.com/blog/using-webaudiorecorder-js-to-record-audio-on-your-website/)
