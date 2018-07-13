@@ -9,7 +9,7 @@ var encodeAfterRecord = true;       // when to encode
 
 // shim for AudioContext when it's not avb. 
 var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioContext = new AudioContext; //new audio context to help us record
+var audioContext; //new audio context to help us record
 
 var encodingTypeSelect = document.getElementById("encodingTypeSelect");
 var recordButton = document.getElementById("recordButton");
@@ -36,6 +36,14 @@ function startRecording() {
 
 	navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
 		__log("getUserMedia() success, stream created, initializing WebAudioRecorder...");
+
+		/*
+			create an audio context after getUserMedia is called
+			sampleRate might change after getUserMedia is called, like it does on macOS when recording through AirPods
+			the sampleRate defaults to the one set in your OS for your playback device
+
+		*/
+		audioContext = new AudioContext();
 
 		//assign to gumStream for later use
 		gumStream = stream;
