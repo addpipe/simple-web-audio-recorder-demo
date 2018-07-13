@@ -22,12 +22,6 @@
 		<button id="stopButton" disabled>Stop</button>
 	</div>
 	<div id="formats"></div>
-    <script type="text/javascript">
-      var AudioContext = window.AudioContext || window.webkitAudioContext;
-      var audioCtx = new AudioContext();
-      document.getElementById("formats").innerHTML="Format: 2 channel audio at "+audioCtx.sampleRate/1000+"kHz"
-      console.log(audioCtx.sampleRate);
-    </script>
 	<h3>Log</h3>
 	<pre id="log"></pre>
 
