@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Simple WebAudioRecorder.js demo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-  	<h1>WebAudioRecorder.js demo</h1> 
-  	<p><a href="https://github.com/higuma/web-audio-recorder-js" target="_blank">WebAudioRecorder.js</a> is a JavaScript library written in 2015 by higuma that can record audio and encode to common formats (pcm, Vorbis, mp3) directly in the browser.</p>
-	<p>Check out the <a href="https://github.com/addpipe/simple-web-audio-recorder-demo" target="_blank">code on GitHub</a> and our <a href="https://addpipe.com/blog/using-webaudiorecorder-js-to-record-audio-on-your-website/" target="_blank">blog post on using WebAudioRecorder.js to Record MP3, Vorbis and WAV Audio</a>.</p>
-	<p>Convert recorded audio to:<br>
-	<select id="encodingTypeSelect">
-	  <option value="wav">Waveform Audio (.wav)</option>
-	  <option value="mp3">MP3 (MPEG-1 Audio Layer III) (.mp3)</option>
-	  <option value="ogg">Ogg Vorbis (.ogg)</option>
-	</select>
-	</p>
-	<div id="controls">
-		<button id="recordButton">Record</button>
-		<button id="stopButton" disabled>Stop</button>
-	</div>
-	<div id="formats"></div>
-	<h3>Log</h3>
-	<pre id="log"></pre>
+<head>
+	<meta charset="UTF-8">
 
-	<h3>Recordings</h3>
-	<ol id="recordingsList"></ol>
-  
-  	<!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+	<title>Audio Recording Demo With WebAudioRecorder.js - addpipe.com</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Latest compiled and minified Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Audio Recording Demo With WebAudioRecorder.js</h1>
+	<p><small>Made by the <a href="https://addpipe.com" target="_blank">Pipe Video Recording Platform</a></small></p>
+	<p>This demo shows you how to use <a href="https://github.com/higuma/web-audio-recorder-js" target="_blank">WebAudioRecorder.js</a> - a JavaScript library written in 2015 by higuma - to record audio and encode to common formats (pcm, Vorbis, mp3) directly in the browser.</p>
+	<p>Check out the <a href="https://github.com/addpipe/simple-web-audio-recorder-demo" target="_blank">code on GitHub</a> and our <a href="https://addpipe.com/blog/using-webaudiorecorder-js-to-record-audio-on-your-website/" target="_blank">blog post on using WebAudioRecorder.js to Record MP3, Vorbis and WAV Audio</a>.</p>
+	<div style="max-width: 28em;">
+		<p>Convert recorded audio to:</p>
+		<select id="encodingTypeSelect">
+		  <option value="wav">Waveform Audio (.wav)</option>
+		  <option value="mp3">MP3 (MPEG-1 Audio Layer III) (.mp3)</option>
+		  <option value="ogg">Ogg Vorbis (.ogg)</option>
+		</select>
+		<div id="controls">
+			<button id="recordButton">Record</button>
+			<button id="stopButton" disabled>Stop</button>
+		</div>
+		<div id="formats"></div>
+		<pre>Log</pre>
+		<pre id="log"></pre>
+
+		<pre>Recordings</pre>
+		<ol id="recordingsList"></ol>
+	</div>
+
+	<!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
 	<script src="js/WebAudioRecorder.min.js"></script>
 	<script src="js/app.js"></script>
 
-  </body>
+</body>
 </html>

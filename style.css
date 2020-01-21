@@ -1,7 +1,44 @@
-* {
-  padding: 0;
-  margin: 0;
+html {
+  font-size: 100%;
 }
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color:black;
+  margin:2em;
+}
+
+h1 {
+  text-decoration: underline red;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  font-size: 220%;
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+  color: #005A9C;
+  font-size: 140%;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 1em 0;
+}
+
+pre {
+  padding: 0px;
+  border:0px;
+  border-radius: 0px;
+}
+
+red {
+  color: red;
+}
+
 a {
   color: #337ab7;
 }
@@ -14,14 +51,7 @@ a:hover {
 a:visited {
   color: #8d75a3;
 }
-body {
-  margin: 1rem;
-  padding: 1rem;
-  font-family: sans-serif;
-  max-width: 28rem;
-  margin: 0 auto;
-  position: relative;
-}
+
 #controls {
   display: flex;
   margin-top: 2rem;
