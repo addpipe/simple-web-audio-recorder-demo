@@ -3,4 +3,4 @@ A simple HTML/JS demo that uses [WebAudioRecorder.js](https://github.com/higuma/
 
 Blog post: [https://blog.addpipe.com/using-webaudiorecorder-js-to-record-audio-on-your-website/](https://blog.addpipe.com/using-webaudiorecorder-js-to-record-audio-on-your-website/)
 
-Demo: [https://addpipe.com/simple-web-audio-recorder-demo/](https://addpipe.com/simple-web-audio-recorder-demo/)
+Demo: [https://addpipe.com/webaudiorecorder-demo/](https://addpipe.com/webaudiorecorder-demo/)
